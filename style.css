@@ -37,6 +37,16 @@ a,
   pointer-events: all;
 }
 
+/* Logo-hover -------------- */
+
+.hover-link {
+  transition: all 0.3s ease-out;
+}
+
+.hover-link:hover {
+  color: goldenrod;
+}
+
 /* Header ------------- */
 
 header {
@@ -58,7 +68,7 @@ header {
 
 .logo-span {
   opacity: 0;
-  transition: all 0.3s ease;
+  transition: all 0.3s ease-out;
   transform: translateX(50px);
   pointer-events: none;
 }
@@ -326,7 +336,7 @@ header {
   }
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1300px) {
   .hero-text-container {
     padding-left: 4rem;
   }
