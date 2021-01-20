@@ -56,6 +56,7 @@ function heroEnterAnimation() {
     onComplete: () => {
       logoAnimation();
       projectsEnterAnimation();
+      detailsEnterAnimation();
     },
   });
 }
@@ -97,7 +98,7 @@ function projectsEnterAnimation() {
   projectTextH.forEach((text, index) => {
     ScrollTrigger.create({
       trigger: text,
-      start: 'top 70%',
+      start: 'top 80%',
       onEnter: () => {
         tl.to(
           [
@@ -115,7 +116,47 @@ function projectsEnterAnimation() {
   });
 }
 
+const dividers = document.querySelectorAll('.divider-line');
+
+const detailsTextH = document.querySelectorAll('.details-text-h');
+const detailsTextHMask = document.querySelectorAll('.details-text-h-mask');
+const detailsTextP = document.querySelectorAll('.details-text-p');
+const detailsTextPMask = document.querySelectorAll('.details-text-p-mask');
+
+gsap.set([detailsTextHMask, detailsTextPMask], { yPercent: 105 });
+gsap.set([detailsTextP, detailsTextH], { yPercent: -101 });
+
+gsap.set(dividers, { y: 50, autoAlpha: 0 });
+gsap.set(dividers, { y: 50, autoAlpha: 0 });
+
+function detailsEnterAnimation() {
+  const tl = gsap.timeline({
+    defaults: {
+      duration: 0.7,
+      ease: 'power1.out',
+    },
+  });
+
+  dividers.forEach((divider, index) => {
+    ScrollTrigger.create({
+      trigger: divider,
+      start: 'top 80%',
+      onEnter: () => {
+        tl.to(divider, { y: 0, autoAlpha: 1 });
+        tl.to(
+          [
+            detailsTextP[index],
+            detailsTextH[index],
+            detailsTextHMask[index],
+            detailsTextPMask[index],
+          ],
+          { yPercent: 0 }
+        );
+      },
+    });
+  });
+}
+
 window.addEventListener('load', () => {
-  // logoAnimation();
   heroEnterAnimation();
 });
