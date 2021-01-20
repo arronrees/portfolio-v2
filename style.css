@@ -119,7 +119,6 @@ header {
 .project-img-mask {
   width: 100%;
   height: 100%;
-  overflow: hidden;
 }
 
 .project-img-mask img {
@@ -129,8 +128,7 @@ header {
   object-position: center;
 }
 
-.project-text-mask {
-  overflow: hidden;
+.project-text-container {
   height: 100%;
   width: 100%;
   padding: 4rem;
