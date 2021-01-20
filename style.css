@@ -15,6 +15,7 @@ body {
   background-color: var(--bg-colour);
   color: var(--text-colour);
   overflow-x: hidden;
+  line-height: 1.5;
 }
 
 a {
@@ -24,6 +25,16 @@ a {
 
 .mask {
   overflow: hidden;
+  pointer-events: none;
+}
+
+* {
+  pointer-events: none;
+}
+
+a,
+.logo {
+  pointer-events: all;
 }
 
 /* Header ------------- */
@@ -155,6 +166,12 @@ header {
 .project-text-p {
   font-family: var(--body-font);
   font-size: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.project-text-p i {
+  padding: 1rem;
 }
 
 /* Details -------------- */

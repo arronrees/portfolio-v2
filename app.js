@@ -32,8 +32,10 @@ function logoAnimation() {
   }
 }
 
+// Scrolls to top of page when logo clicked
+const heroSection = document.querySelector('.hero-section');
 logoText.addEventListener('click', () => {
-  gsap.to(window, { duration: 1.5, scrollTo: '.hero-box', ease: 'power4.out' });
+  gsap.to(window, { duration: 1.5, scrollTo: heroSection, ease: 'power4.out' });
 });
 
 const heroImg = document.querySelector('.hero-img');
