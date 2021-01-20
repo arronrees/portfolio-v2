@@ -70,7 +70,7 @@ header {
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  height: 16rem;
+  height: inherit;
 }
 
 .hero-text {
@@ -80,4 +80,45 @@ header {
 .hero-text-mask,
 .hero-text {
   z-index: 1;
+}
+
+@media only screen and (min-width: 600px) {
+  .hero-section {
+    margin-top: 6rem;
+    height: 24rem;
+  }
+
+  .hero-img-mask {
+    height: 16rem;
+  }
+
+  .hero-text-container {
+    width: 50%;
+    margin-left: auto;
+    align-items: flex-start;
+  }
+
+  .hero-text {
+    font-size: 3rem;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  .hero-section {
+    margin-top: 0;
+    height: 100vh;
+  }
+
+  .hero-img-mask {
+    height: 50vh;
+    top: 25%;
+  }
+
+  .hero-text-container {
+    height: 70%;
+  }
+
+  .hero-text {
+    font-size: 5rem;
+  }
 }
