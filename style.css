@@ -138,6 +138,38 @@ header {
   font-size: 1rem;
 }
 
+/* Details -------------- */
+.details {
+  width: 80vw;
+  margin: 0 auto;
+  padding-bottom: 8rem;
+}
+
+.divider-line {
+  width: 80vw;
+  height: 2px;
+  margin: 0 auto;
+  background-color: var(--text-colour);
+}
+
+.about,
+.contact {
+  padding: 4rem 2rem;
+}
+
+.about-text h2,
+.contact-text h2 {
+  font-family: var(--title-font);
+  font-size: 1.5rem;
+  padding-bottom: 1rem;
+}
+
+.about-text p,
+.contact-text p {
+  font-family: var(--body-font);
+  font-size: 1rem;
+}
+
 /* Media Queries ---------------------- */
 
 @media only screen and (min-width: 600px) {
