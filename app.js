@@ -32,6 +32,33 @@ function logoAnimation() {
   }
 }
 
+const heroImg = document.querySelector('.hero-img');
+const heroImgMask = document.querySelector('.hero-img-mask');
+const heroText = document.querySelectorAll('.hero-text');
+const heroTextMask = document.querySelectorAll('.hero-text-mask');
+
+function heroEnterAnimation() {
+  // Sets mask and item opposites on y axis
+  gsap.set([heroText, heroImg], { yPercent: 105 });
+  gsap.set([heroImgMask, heroTextMask], { yPercent: -101 });
+
+  const tl = gsap.timeline({
+    defaults: {
+      duration: 1,
+      ease: 'power1.out',
+    },
+  });
+
+  // Moves mask and item back to 0 on y axis
+  tl.to([heroText, heroTextMask], {
+    yPercent: 0,
+  }).to([heroImg, heroImgMask], {
+    yPercent: 0,
+    onComplete: logoAnimation,
+  });
+}
+
 window.addEventListener('load', () => {
-  logoAnimation();
+  // logoAnimation();
+  heroEnterAnimation();
 });

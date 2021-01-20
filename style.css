@@ -22,6 +22,10 @@ a {
   color: currentColor;
 }
 
+.mask {
+  overflow: hidden;
+}
+
 /* Header ------------- */
 
 header {
@@ -93,6 +97,9 @@ header {
 .hero-text-mask,
 .hero-text {
   z-index: 1;
+}
+.hero-text-mask {
+  padding-bottom: 0.7rem;
 }
 
 /* Projects ------------------ */
@@ -304,6 +311,14 @@ header {
 }
 
 @media only screen and (min-width: 1200px) {
+  .hero-text-container {
+    padding-left: 4rem;
+  }
+
+  .hero-text {
+    font-size: 6rem;
+  }
+
   .projects {
     grid-auto-rows: 100vh;
   }
