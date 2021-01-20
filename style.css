@@ -147,7 +147,7 @@ header {
 
 .divider-line {
   width: 80vw;
-  height: 2px;
+  height: 1px;
   margin: 0 auto;
   background-color: var(--text-colour);
 }
@@ -207,6 +207,22 @@ header {
   .project-text-p {
     font-size: 1.5rem;
   }
+
+  /* Details ------------ */
+  .about,
+  .contact {
+    padding: 6rem 2rem;
+  }
+
+  .about-text h2,
+  .contact-text h2 {
+    font-size: 2rem;
+  }
+
+  .about-text p,
+  .contact-text p {
+    font-size: 1.5rem;
+  }
 }
 
 @media only screen and (min-width: 900px) {
@@ -264,10 +280,24 @@ header {
   .project-grid-item:nth-child(8) {
     grid-area: g;
   }
+  /* Details ------- */
+  .details {
+    padding-top: 8rem;
+  }
+
+  .about,
+  .contact {
+    padding: 8rem 2rem;
+  }
 }
 
 @media only screen and (min-width: 1200px) {
   .projects {
     grid-auto-rows: 100vh;
+  }
+
+  .about,
+  .contact {
+    width: 50%;
   }
 }
