@@ -63,6 +63,7 @@ function heroEnterAnimation() {
       logoAnimation();
       projectsEnterAnimation();
       detailsEnterAnimation();
+      imageParallaxScroll();
     },
   });
 }
@@ -117,6 +118,20 @@ function projectsEnterAnimation() {
             yPercent: 0,
           }
         );
+      },
+    });
+  });
+}
+
+function imageParallaxScroll() {
+  projectImage.forEach((img) => {
+    gsap.to(img, {
+      y: '20%',
+      ease: 'none',
+      scrollTrigger: {
+        trigger: img,
+        start: 'top bottom',
+        scrub: true,
       },
     });
   });
