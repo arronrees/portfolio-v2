@@ -199,11 +199,13 @@ header {
 }
 
 .about,
+.skills,
 .contact {
   padding: 4rem 2rem;
 }
 
 .about-text h2,
+.skills-text h2,
 .contact-text h2 {
   font-family: var(--title-font);
   font-size: 1.5rem;
@@ -211,6 +213,7 @@ header {
 }
 
 .about-text p,
+.skills-text p,
 .contact-text p {
   font-family: var(--body-font);
   font-size: 1rem;
@@ -255,16 +258,19 @@ header {
 
   /* Details ------------ */
   .about,
+  .skills,
   .contact {
     padding: 6rem 2rem;
   }
 
   .about-text h2,
+  .skills-text h2,
   .contact-text h2 {
     font-size: 2rem;
   }
 
   .about-text p,
+  .skills-text p,
   .contact-text p {
     font-size: 1.5rem;
   }
@@ -331,6 +337,7 @@ header {
   }
 
   .about,
+  .skills,
   .contact {
     padding: 8rem 2rem;
   }
@@ -350,6 +357,7 @@ header {
   }
 
   .about,
+  .skills,
   .contact {
     width: 50%;
   }
