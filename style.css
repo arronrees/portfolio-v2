@@ -1,0 +1,83 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --bg-colour: #151516;
+  --text-colour: #fff;
+  --title-font: 'Playfair Display', serif;
+}
+
+body {
+  background-color: var(--bg-colour);
+  color: var(--text-colour);
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+
+/* Header ------------- */
+
+header {
+  background-color: lightcoral;
+  position: relative;
+}
+
+.logo {
+  left: 2rem;
+  top: 2rem;
+  position: fixed;
+  z-index: 1;
+  text-transform: uppercase;
+  letter-spacing: 0.25rem;
+  font-family: var(--title-font);
+}
+
+/* Hero --------------- */
+
+.hero-section {
+  margin-top: 4rem;
+  height: 20rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--title-font);
+}
+
+.hero-img-mask {
+  position: absolute;
+  width: 80vw;
+  height: 12rem;
+  left: 10vw;
+  top: 4rem;
+}
+
+.hero-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.hero-text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 16rem;
+}
+
+.hero-text {
+  font-size: 2rem;
+}
+
+.hero-text-mask,
+.hero-text {
+  z-index: 1;
+}
