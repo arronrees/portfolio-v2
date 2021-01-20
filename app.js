@@ -45,7 +45,6 @@ function cursor() {
 }
 
 // scrolls to image section if user clicks on hero
-
 if (window.innerWidth > 900) {
   console.log(window.innerWidth);
   document.querySelector('.hero-section').addEventListener('click', (e) => {
