@@ -1,4 +1,4 @@
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
 const logoText = document.querySelector('.logo');
 const logoTextContent = logoText.textContent;
@@ -31,6 +31,10 @@ function logoAnimation() {
     }
   }
 }
+
+logoText.addEventListener('click', () => {
+  gsap.to(window, { duration: 1.5, scrollTo: '.hero-box', ease: 'power4.out' });
+});
 
 const heroImg = document.querySelector('.hero-img');
 const heroImgMask = document.querySelector('.hero-img-mask');

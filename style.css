@@ -42,12 +42,14 @@ header {
   letter-spacing: 0.25rem;
   font-family: var(--title-font);
   display: flex;
+  cursor: pointer;
 }
 
 .logo-span {
   opacity: 0;
   transition: all 0.3s ease;
   transform: translateX(50px);
+  pointer-events: none;
 }
 
 .logo-span.logo-text-fade {
@@ -58,7 +60,7 @@ header {
 /* Hero --------------- */
 
 .hero-section {
-  margin-top: 4rem;
+  margin-top: 8rem;
   height: 20rem;
   position: relative;
   display: flex;
@@ -192,7 +194,6 @@ header {
 @media only screen and (min-width: 600px) {
   /* Hero --------------- */
   .hero-section {
-    margin-top: 6rem;
     height: 24rem;
   }
 
