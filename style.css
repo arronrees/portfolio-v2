@@ -18,6 +18,18 @@ body {
   line-height: 1.5;
 }
 
+::-webkit-scrollbar {
+  width: 0.25rem;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg-colour);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--text-colour);
+}
+
 a {
   text-decoration: none;
   color: currentColor;
@@ -25,7 +37,6 @@ a {
 
 .mask {
   overflow: hidden;
-  pointer-events: none;
 }
 
 * {
@@ -33,7 +44,8 @@ a {
 }
 
 a,
-.logo {
+.logo,
+.hero-section {
   pointer-events: all;
 }
 
@@ -277,6 +289,30 @@ header {
 }
 
 @media only screen and (min-width: 900px) {
+  /* Cursor ------------- */
+
+  .cursor {
+    position: absolute;
+    transform: translate(-50%, -50%);
+    pointer-events: none;
+    transition: all 0.2s ease-in-out;
+    transition-property: background, width, height;
+    z-index: 10;
+    background: var(--text-colour);
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+  }
+
+  .cursor.initial {
+    background: url('./img/arrow-down.svg');
+    width: 35px;
+    height: 35px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
   /* Hero --------------- */
   .hero-section {
     margin-top: 0;

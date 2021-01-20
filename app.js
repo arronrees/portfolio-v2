@@ -1,5 +1,58 @@
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
+// cursor follow animation
+function cursor() {
+  const mouse = document.querySelector('.cursor');
+
+  let mouseX = 0;
+  let mouseY = 0;
+
+  let ballX = 0;
+  let ballY = 0;
+
+  let speed = 0.1;
+
+  // moves cursor div around following mouse
+  function animate() {
+    let distX = mouseX - ballX;
+    let distY = mouseY - ballY;
+
+    ballX = ballX + distX * speed;
+    ballY = ballY + distY * speed;
+
+    mouse.style.left = `${ballX}px`;
+    mouse.style.top = `${ballY}px`;
+
+    requestAnimationFrame(animate);
+  }
+
+  animate();
+
+  // sets initial follow
+  function cursorFollow(e) {
+    mouseX = e.pageX;
+    mouseY = e.pageY;
+
+    // if user scrolled past hero remove arrow
+    if (e.pageY < window.innerHeight) {
+      mouse.classList.add('initial');
+    } else {
+      mouse.classList.remove('initial');
+    }
+  }
+
+  document.addEventListener('mousemove', cursorFollow);
+}
+
+// scrolls to image section if user clicks on hero
+
+if (window.innerWidth > 900) {
+  console.log(window.innerWidth);
+  document.querySelector('.hero-section').addEventListener('click', (e) => {
+    gsap.to(window, { duration: 1, scrollTo: '.projects' });
+  });
+}
+
 const logoText = document.querySelector('.logo');
 const logoTextContent = logoText.textContent;
 const logoSplitText = logoTextContent.split('');
@@ -180,4 +233,5 @@ function detailsEnterAnimation() {
 
 window.addEventListener('load', () => {
   heroEnterAnimation();
+  cursor();
 });
