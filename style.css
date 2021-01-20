@@ -37,6 +37,18 @@ header {
   text-transform: uppercase;
   letter-spacing: 0.25rem;
   font-family: var(--title-font);
+  display: flex;
+}
+
+.logo-span {
+  opacity: 0;
+  transition: all 0.3s ease;
+  transform: translateX(50px);
+}
+
+.logo-span.logo-text-fade {
+  opacity: 1;
+  transform: translateX(0px);
 }
 
 /* Hero --------------- */
