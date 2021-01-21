@@ -1,5 +1,7 @@
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
+let bodyScrollBar;
+
 gsap.set('#main-page', { autoAlpha: 0 });
 
 const loadingContent = document.querySelector('.loading-content');
@@ -83,11 +85,15 @@ function cursor() {
 }
 
 // scrolls to image section if user clicks on hero
+// inits smooth scrolling if over 900px
 if (window.innerWidth > 900) {
-  console.log(window.innerWidth);
   document.querySelector('.hero-section').addEventListener('click', (e) => {
-    gsap.to(window, { duration: 1, scrollTo: '.projects' });
+    bodyScrollBar.scrollIntoView(document.querySelector('.projects'), {
+      damping: 0.07,
+      offsetTop: -32,
+    });
   });
+  initSmoothScrollbar();
 }
 
 const logoText = document.querySelector('.logo');
@@ -273,6 +279,36 @@ function start() {
 
   heroEnterAnimation();
   cursor();
+}
+
+function initSmoothScrollbar() {
+  bodyScrollBar = Scrollbar.init(document.querySelector('#main-page'), {
+    damping: 0.07,
+  });
+
+  // remove horizontal scrollbar
+  bodyScrollBar.track.xAxis.element.remove();
+
+  // keep scrollTrigger in sync with smooth scrollbar
+  ScrollTrigger.scrollerProxy(document.body, {
+    scrollTop(value) {
+      if (arguments.length) {
+        bodyScrollBar.scrollTop = value; // setter
+      }
+      return bodyScrollBar.scrollTop; // getter
+    },
+    getBoundingClientRect() {
+      return {
+        top: 0,
+        left: 0,
+        width: window.innerWidth,
+        height: window.innerHeight,
+      };
+    },
+  });
+
+  // when the smooth scroller updates, tell ScrollTrigger to update() too:
+  bodyScrollBar.addListener(ScrollTrigger.update);
 }
 
 window.addEventListener('load', () => {

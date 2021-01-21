@@ -11,6 +11,10 @@
   --body-font: 'Josefin Sans', sans-serif;
 }
 
+html {
+  overflow-x: hidden;
+}
+
 body {
   background-color: var(--bg-colour);
   color: var(--text-colour);
@@ -18,16 +22,25 @@ body {
   line-height: 1.5;
 }
 
-::-webkit-scrollbar {
+body::-webkit-scrollbar {
   width: 0.25rem;
 }
 
-::-webkit-scrollbar-track {
+body::-webkit-scrollbar-track {
   background: var(--bg-colour);
 }
 
-::-webkit-scrollbar-thumb {
+body::-webkit-scrollbar-thumb {
   background: var(--text-colour);
+}
+
+.scrollbar-track {
+  background-color: var(--bg-colour);
+}
+
+.scrollbar-thumb {
+  background-color: var(--text-colour);
+  width: 0.25rem;
 }
 
 a {
@@ -39,7 +52,7 @@ a {
   overflow: hidden;
 }
 
-* {
+.project-img-mask {
   pointer-events: none;
 }
 
@@ -56,6 +69,7 @@ a,
 /* Intro --------------------- */
 
 #intro {
+  overflow: hidden;
   position: absolute;
   top: 0;
   left: 0;
@@ -144,7 +158,6 @@ header {
   letter-spacing: 0.25rem;
   font-family: var(--title-font);
   display: flex;
-  cursor: pointer;
 }
 
 .logo-span {
@@ -358,6 +371,15 @@ header {
 }
 
 @media only screen and (min-width: 900px) {
+  #main-page {
+    overflow: hidden;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+  }
+
   /* Cursor ------------- */
 
   .cursor {
