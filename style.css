@@ -49,6 +49,71 @@ a,
   pointer-events: all;
 }
 
+/* Intro --------------------- */
+
+#intro {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.loading {
+  width: 8rem;
+  height: 8rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.loading-border {
+  width: 8rem;
+  height: 8rem;
+  position: absolute;
+  z-index: 5;
+}
+
+.loading-border-top {
+  border-top: 4px solid var(--text-colour);
+}
+
+.loading-border-right {
+  border-right: 4px solid var(--text-colour);
+}
+
+.loading-border-bottom {
+  border-bottom: 4px solid var(--text-colour);
+}
+
+.loading-border-left {
+  border-left: 4px solid var(--text-colour);
+}
+
+.loading-content {
+  position: absolute;
+  width: 7.5rem;
+  height: 7.5rem;
+  top: 4px;
+  left: 4px;
+  z-index: 5;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 /* Logo-hover -------------- */
 
 .hover-link {
@@ -302,6 +367,8 @@ header {
     width: 5px;
     height: 5px;
     border-radius: 50%;
+
+    mix-blend-mode: difference;
   }
 
   .cursor.initial {

@@ -25,222 +25,236 @@
 
 <body>
 
-  <div class="cursor"></div>
+  <div id="intro">
+    <div class="loading">
+      <div class="loading-border loading-border-top"></div>
+      <div class="loading-border loading-border-right"></div>
+      <div class="loading-border loading-border-bottom"></div>
+      <div class="loading-border loading-border-left"></div>
+      <div class="loading-content"></div>
+    </div>
+  </div>
 
-  <header>
+  <div id="main-page">
 
-    <h1 class="logo hover-link">Arron Rees</h1>
+    <div class="cursor"></div>
 
-  </header>
+    <header>
 
-  <main>
+      <h1 class="logo hover-link">Arron Rees</h1>
 
-    <section class="hero-section">
+    </header>
 
-      <div class="hero-img-mask mask">
+    <main>
 
-        <img src="./img/hero-img.jpg" class="hero-img">
+      <section class="hero-section">
 
-      </div>
+        <div class="hero-img-mask mask">
 
-      <div class="hero-text-container">
+          <img src="./img/hero-img.jpg" class="hero-img">
 
-        <div class="hero-text-mask mask">
-          <p class="hero-text">A front</p>
-        </div>
-        <div class="hero-text-mask mask">
-          <p class="hero-text">end</p>
-        </div>
-        <div class="hero-text-mask mask">
-          <p class="hero-text">web</p>
-        </div>
-        <div class="hero-text-mask mask">
-          <p class="hero-text">development</p>
-        </div>
-        <div class="hero-text-mask mask">
-          <p class="hero-text">portfolio.</p>
         </div>
 
-      </div>
+        <div class="hero-text-container">
 
-    </section>
+          <div class="hero-text-mask mask">
+            <p class="hero-text">A front</p>
+          </div>
+          <div class="hero-text-mask mask">
+            <p class="hero-text">end</p>
+          </div>
+          <div class="hero-text-mask mask">
+            <p class="hero-text">web</p>
+          </div>
+          <div class="hero-text-mask mask">
+            <p class="hero-text">development</p>
+          </div>
+          <div class="hero-text-mask mask">
+            <p class="hero-text">portfolio.</p>
+          </div>
 
-    <section class="projects">
-
-      <div class="project-grid-item project-img-container">
-        <div class="project-img-mask mask">
-          <img class="project-img project-img1" src="./img/project-1.jpg">
         </div>
-      </div>
 
-      <div class="project-grid-item project-text">
-        <div class="project-text-container">
-          <div class="project-text-content">
-            <div class="project-text-h-mask mask">
-              <h2 class="project-text-h">Photography Portfolio</h2>
+      </section>
+
+      <section class="projects">
+
+        <div class="project-grid-item project-img-container">
+          <div class="project-img-mask mask">
+            <img class="project-img project-img1" src="./img/project-1.jpg">
+          </div>
+        </div>
+
+        <div class="project-grid-item project-text">
+          <div class="project-text-container">
+            <div class="project-text-content">
+              <div class="project-text-h-mask mask">
+                <h2 class="project-text-h">Photography Portfolio</h2>
+              </div>
+              <div class="project-text-p-mask mask">
+                <p class="project-text-p">
+                  A static, responsive photography portfolio website. Built using HTML, CSS and Javascript. Animations
+                  created in CSS and using GSAP. GSAP ScrollTrigger is used to activate each photo to appear.
+                  <a class="hover-link" target="blank"
+                    href="https://github.com/arronrees/example-photography-portfolio"><i class="fab fa-github"></i>See
+                    the code</a>
+                  <a class="hover-link" target="blank" href="https://ar-photo.netlify.app/"><i
+                      class="fas fa-cloud"></i>See
+                    the site</a>
+                </p>
+              </div>
             </div>
-            <div class="project-text-p-mask mask">
-              <p class="project-text-p">
-                A static, responsive photography portfolio website. Built using HTML, CSS and Javascript. Animations
-                created in CSS and using GSAP. GSAP ScrollTrigger is used to activate each photo to appear.
-                <a class="hover-link" target="blank"
-                  href="https://github.com/arronrees/example-photography-portfolio"><i class="fab fa-github"></i>See
-                  the code</a>
-                <a class="hover-link" target="blank" href="https://ar-photo.netlify.app/"><i
-                    class="fas fa-cloud"></i>See
-                  the site</a>
+          </div>
+        </div>
+
+        <div class="project-grid-item project-img-container">
+          <div class="project-img-mask mask">
+            <img class="project-img project-img2" src="./img/project-2.jpg">
+          </div>
+        </div>
+
+        <div class="project-grid-item project-text">
+          <div class="project-text-container">
+            <div class="project-text-content">
+              <div class="project-text-h-mask mask">
+                <h2 class="project-text-h">Pokemon Generator</h2>
+              </div>
+              <div class="project-text-p-mask mask">
+                <p class="project-text-p">
+                  Click to load Pokemon. Built using HTML, CSS and Javascript. Most of the HTML is generated through
+                  Javascript. Uses the Fetch API and Async Await to gather Pokemon data from pokeapi.co. Cycles through
+                  available Pokemon and displays their picture, name and abilities to the user.
+                  <a class="hover-link" target="blank" href="https://github.com/arronrees/pokemon-generator"><i
+                      class="fab fa-github"></i>See
+                    the code</a>
+                  <a class="hover-link" target="blank" href="https://pokemon-generator.netlify.app/"><i
+                      class="fas fa-cloud"></i>See
+                    the site</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-grid-item project-img-container">
+          <div class="project-img-mask mask">
+            <img class="project-img project-img3" src="./img/project-3.jpg">
+          </div>
+        </div>
+
+        <div class="project-grid-item project-text">
+          <div class="project-text-container">
+            <div class="project-text-content">
+              <div class="project-text-h-mask mask">
+                <h2 class="project-text-h">Character Search</h2>
+              </div>
+              <div class="project-text-p-mask mask">
+                <p class="project-text-p">
+                  Search for any character from Middle Earth. Built using the Javascript Fetch API and Async Await to
+                  gather and present
+                  data from the-one-api.dev. Allows the user to input a character name. It will search the API for all
+                  matches and present the name of each matched character. The user can then click on their preferred
+                  character and details about the character will appear.
+                  <a class="hover-link" target="blank" href="https://github.com/arronrees/lotr-character-finder"><i
+                      class="fab fa-github"></i>See
+                    the code</a>
+                  <a class="hover-link" target="blank" href="https://lotr-character.netlify.app/"><i
+                      class="fas fa-cloud"></i>See
+                    the site</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="project-grid-item project-img-container">
+          <div class="project-img-mask mask">
+            <img class="project-img project-img4" src="./img/project-4.jpg">
+          </div>
+        </div>
+
+        <div class="project-grid-item project-text">
+          <div class="project-text-container">
+            <div class="project-text-content">
+              <div class="project-text-h-mask mask">
+                <h2 class="project-text-h">Rock, Paper, Scissors</h2>
+              </div>
+              <div class="project-text-p-mask mask">
+                <p class="project-text-p">
+                  Play rock, paper, scissors against the computer. Built using HTML, CSS and Javascript.
+                  Stores the player's name and scores in local storage and will present this on reload if the user
+                  enters
+                  the same name. Scores can be reset by clicking the button or if a new name is entered.
+                  <a class="hover-link" target="blank" href="https://github.com/arronrees/rock-paper-scissors"><i
+                      class="fab fa-github"></i>See
+                    the code</a>
+                  <a class="hover-link" target="blank" href="https://ar-rps.netlify.app/"><i
+                      class="fas fa-cloud"></i>See
+                    the site</a>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </section>
+
+      <section class="details">
+
+        <div class="divider-line"></div>
+
+        <div class="about">
+          <div class="about-text">
+            <div class="details-text-h-mask mask">
+              <h2 class="details-text-h">About</h2>
+            </div>
+            <div class="details-text-p-mask mask">
+              <p class="details-text-p">Hi, I'm Arron.<br>
+                Based in Somerset, UK.<br>
+                Self taught front end developer.<br>
+                Currently studying Computing and IT further with the Open University.
               </p>
             </div>
           </div>
         </div>
-      </div>
 
-      <div class="project-grid-item project-img-container">
-        <div class="project-img-mask mask">
-          <img class="project-img project-img2" src="./img/project-2.jpg">
-        </div>
-      </div>
+        <div class="divider-line"></div>
 
-      <div class="project-grid-item project-text">
-        <div class="project-text-container">
-          <div class="project-text-content">
-            <div class="project-text-h-mask mask">
-              <h2 class="project-text-h">Pokemon Generator</h2>
+        <div class="skills">
+          <div class="skills-text">
+            <div class="details-text-h-mask mask">
+              <h2 class="details-text-h">Skills and technologies</h2>
             </div>
-            <div class="project-text-p-mask mask">
-              <p class="project-text-p">
-                Click to load Pokemon. Built using HTML, CSS and Javascript. Most of the HTML is generated through
-                Javascript. Uses the Fetch API and Async Await to gather Pokemon data from pokeapi.co. Cycles through
-                available Pokemon and displays their picture, name and abilities to the user.
-                <a class="hover-link" target="blank" href="https://github.com/arronrees/pokemon-generator"><i
-                    class="fab fa-github"></i>See
-                  the code</a>
-                <a class="hover-link" target="blank" href="https://pokemon-generator.netlify.app/"><i
-                    class="fas fa-cloud"></i>See
-                  the site</a>
+            <div class="details-text-p-mask mask">
+              <p class="details-text-p">Javascript, GSAP<br>
+                HTML5, CSS, SCSS<br>
+                Adobe Creative Cloud
               </p>
             </div>
           </div>
         </div>
-      </div>
 
-      <div class="project-grid-item project-img-container">
-        <div class="project-img-mask mask">
-          <img class="project-img project-img3" src="./img/project-3.jpg">
-        </div>
-      </div>
+        <div class="divider-line"></div>
 
-      <div class="project-grid-item project-text">
-        <div class="project-text-container">
-          <div class="project-text-content">
-            <div class="project-text-h-mask mask">
-              <h2 class="project-text-h">Character Search</h2>
+        <div class="contact">
+          <div class="contact-text">
+            <div class="details-text-h-mask mask">
+              <h2 class="details-text-h">Get in touch</h2>
             </div>
-            <div class="project-text-p-mask mask">
-              <p class="project-text-p">
-                Search for any character from Middle Earth. Built using the Javascript Fetch API and Async Await to
-                gather and present
-                data from the-one-api.dev. Allows the user to input a character name. It will search the API for all
-                matches and present the name of each matched character. The user can then click on their preferred
-                character and details about the character will appear.
-                <a class="hover-link" target="blank" href="https://github.com/arronrees/lotr-character-finder"><i
-                    class="fab fa-github"></i>See
-                  the code</a>
-                <a class="hover-link" target="blank" href="https://lotr-character.netlify.app/"><i
-                    class="fas fa-cloud"></i>See
-                  the site</a>
+            <div class="details-text-p-mask mask">
+              <p class="details-text-p">You can contact me via email at
+                <a class="hover-link" href="mailto:arronlrees@gmail.com">arronlrees@gmail.com</a>.
               </p>
             </div>
           </div>
         </div>
-      </div>
 
-      <div class="project-grid-item project-img-container">
-        <div class="project-img-mask mask">
-          <img class="project-img project-img4" src="./img/project-4.jpg">
-        </div>
-      </div>
+        <div class="divider-line"></div>
 
-      <div class="project-grid-item project-text">
-        <div class="project-text-container">
-          <div class="project-text-content">
-            <div class="project-text-h-mask mask">
-              <h2 class="project-text-h">Rock, Paper, Scissors</h2>
-            </div>
-            <div class="project-text-p-mask mask">
-              <p class="project-text-p">
-                Play rock, paper, scissors against the computer. Built using HTML, CSS and Javascript.
-                Stores the player's name and scores in local storage and will present this on reload if the user
-                enters
-                the same name. Scores can be reset by clicking the button or if a new name is entered.
-                <a class="hover-link" target="blank" href="https://github.com/arronrees/rock-paper-scissors"><i
-                    class="fab fa-github"></i>See
-                  the code</a>
-                <a class="hover-link" target="blank" href="https://ar-rps.netlify.app/"><i class="fas fa-cloud"></i>See
-                  the site</a>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+      </section>
 
-    </section>
-
-    <section class="details">
-
-      <div class="divider-line"></div>
-
-      <div class="about">
-        <div class="about-text">
-          <div class="details-text-h-mask mask">
-            <h2 class="details-text-h">About</h2>
-          </div>
-          <div class="details-text-p-mask mask">
-            <p class="details-text-p">Hi, I'm Arron.<br>
-              Based in Somerset, UK.<br>
-              Self taught front end developer.<br>
-              Currently studying Computing and IT further with the Open University.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="divider-line"></div>
-
-      <div class="skills">
-        <div class="skills-text">
-          <div class="details-text-h-mask mask">
-            <h2 class="details-text-h">Skills and technologies</h2>
-          </div>
-          <div class="details-text-p-mask mask">
-            <p class="details-text-p">Javascript, GSAP<br>
-              HTML5, CSS, SCSS<br>
-              Adobe Creative Cloud
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="divider-line"></div>
-
-      <div class="contact">
-        <div class="contact-text">
-          <div class="details-text-h-mask mask">
-            <h2 class="details-text-h">Get in touch</h2>
-          </div>
-          <div class="details-text-p-mask mask">
-            <p class="details-text-p">You can contact me via email at
-              <a class="hover-link" href="mailto:arronlrees@gmail.com">arronlrees@gmail.com</a>.
-            </p>
-          </div>
-        </div>
-      </div>
-
-      <div class="divider-line"></div>
-
-    </section>
-
-  </main>
+    </main>
+  </div>
 
 </body>
 

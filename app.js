@@ -1,5 +1,43 @@
 gsap.registerPlugin(ScrollTrigger, ScrollToPlugin);
 
+gsap.set('#main-page', { autoAlpha: 0 });
+
+const loadingContent = document.querySelector('.loading-content');
+const loadingBorder = document.querySelectorAll('.loading-border');
+
+// Intro animation on load
+function introBorderSlide() {
+  let int = setInterval(() => {
+    loadingContent.textContent += '.';
+  }, 500);
+
+  setTimeout(() => {
+    clearInterval(int);
+  }, 2100);
+
+  // Sets each side of square to correct position
+  gsap.set('.loading-border-top', { xPercent: -100 });
+  gsap.set('.loading-border-right', { yPercent: -100 });
+  gsap.set('.loading-border-bottom', { xPercent: 100 });
+  gsap.set('.loading-border-left', { yPercent: 100 });
+
+  // After animation complete runs start function
+  const tl = gsap.timeline({
+    defaults: { duration: 0.5 },
+    onComplete: start,
+  });
+
+  // square loading animation
+  tl.to('.loading-border-top', { xPercent: 0 }, 0.5)
+    .to('.loading-border-right', { yPercent: 0 })
+    .to('.loading-border-bottom', { xPercent: 0 })
+    .to('.loading-border-left', { yPercent: 0 })
+    .to(loadingBorder, { borderRadius: '50%' })
+    .to('.loading', { overflow: 'visible', duration: 0 })
+    .to(loadingBorder, { width: '120vw', height: '120vw', duration: 1 })
+    .to('#intro', { autoAlpha: 0 }, '-=1');
+}
+
 // cursor follow animation
 function cursor() {
   const mouse = document.querySelector('.cursor');
@@ -230,7 +268,13 @@ function detailsEnterAnimation() {
   });
 }
 
-window.addEventListener('load', () => {
+function start() {
+  gsap.set('#main-page', { autoAlpha: 1 });
+
   heroEnterAnimation();
   cursor();
+}
+
+window.addEventListener('load', () => {
+  introBorderSlide();
 });
