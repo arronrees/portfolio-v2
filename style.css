@@ -397,15 +397,6 @@ header {
     mix-blend-mode: difference;
   }
 
-  .cursor.initial {
-    background: url('./img/arrow-down.svg');
-    width: 35px;
-    height: 35px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
-
   /* Hero --------------- */
   .hero-section {
     margin-top: 0;

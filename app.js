@@ -72,13 +72,6 @@ function cursor() {
   function cursorFollow(e) {
     mouseX = e.pageX;
     mouseY = e.pageY;
-
-    // if user scrolled past hero remove arrow
-    if (e.pageY < window.innerHeight) {
-      mouse.classList.add('initial');
-    } else {
-      mouse.classList.remove('initial');
-    }
   }
 
   document.addEventListener('mousemove', cursorFollow);
