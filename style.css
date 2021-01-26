@@ -101,6 +101,7 @@ a,
   height: 8rem;
   position: absolute;
   z-index: 5;
+  opacity: 0;
 }
 
 .loading-border-top {

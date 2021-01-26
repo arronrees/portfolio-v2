@@ -9,6 +9,8 @@ const loadingBorder = document.querySelectorAll('.loading-border');
 
 // Intro animation on load
 function introBorderSlide() {
+  gsap.set('.loading-border', { autoAlpha: 1 });
+
   let int = setInterval(() => {
     loadingContent.textContent += '.';
   }, 500);
