@@ -148,6 +148,7 @@ function heroEnterAnimation() {
   // Moves mask and item back to 0 on y axis
   tl.to([heroText, heroTextMask], {
     yPercent: 0,
+    stagger: 0.2,
   }).to([heroImg, heroImgMask], {
     yPercent: 0,
     onComplete: () => {
